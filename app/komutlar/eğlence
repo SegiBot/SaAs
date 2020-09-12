@@ -1,0 +1,23 @@
+const Discord = require('discord.js');
+exports.run = async (client, message, args) => { 
+let prefix = '++'
+let eğlences = new Discord.RichEmbed()  
+.setAuthor(`${client.user.username}`, client.user.avatarURL)
+.setColor('RANDOM')
+.addField('İnternal BOT',`
+**++ping** : Botun Pingini Söyler.
+**++oylama** : Oylama Yapar.`)
+.setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
+.setThumbnail(client.user.avatarURL)
+ message.channel.send(eğlence) 
+  };
+exports.conf = {
+  enabled: true,  
+  guildOnly: false, 
+  aliases: ["eğlence"], 
+  permLevel: 0
+};
+exports.help = {
+  name: 'eğlence'
+};
+//Lord Creative  
